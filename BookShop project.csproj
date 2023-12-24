@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26490E0C-F3A9-4192-9541-A4D3AE4956C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BookShop_project</RootNamespace>
+    <AssemblyName>BookShop project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\clsBooks.cs" />
+    <Compile Include="BL\clsBorrow.cs" />
+    <Compile Include="BL\clsCat.cs" />
+    <Compile Include="BL\clsSell.cs" />
+    <Compile Include="BL\clsStudent.cs" />
+    <Compile Include="BL\clsUsers.cs" />
+    <Compile Include="DAL\claDal.cs" />
+    <Compile Include="PL\fAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fAboutUs.Designer.cs">
+      <DependentUpon>fAboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fEditSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fEditSale.Designer.cs">
+      <DependentUpon>fEditSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fFinePerDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fFinePerDay.Designer.cs">
+      <DependentUpon>fFinePerDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fReport.Designer.cs">
+      <DependentUpon>fReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fSaleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fSaleDetails.Designer.cs">
+      <DependentUpon>fSaleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fStart.Designer.cs">
+      <DependentUpon>fStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fUserDetails.Designer.cs">
+      <DependentUpon>fUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fBorrow.Designer.cs">
+      <DependentUpon>fBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fMakeSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fMakeSell.Designer.cs">
+      <DependentUpon>fMakeSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fUsers.Designer.cs">
+      <DependentUpon>fUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\studentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\studentDetails.Designer.cs">
+      <DependentUpon>studentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\bookDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\bookDetails.Designer.cs">
+      <DependentUpon>bookDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fStudent.Designer.cs">
+      <DependentUpon>fStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fBooks.Designer.cs">
+      <DependentUpon>fBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fImageShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fImageShow.Designer.cs">
+      <DependentUpon>fImageShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\fMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\fMessage.Designer.cs">
+      <DependentUpon>fMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\fAboutUs.resx">
+      <DependentUpon>fAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fEditSale.resx">
+      <DependentUpon>fEditSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fFinePerDay.resx">
+      <DependentUpon>fFinePerDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fReport.resx">
+      <DependentUpon>fReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fSaleDetails.resx">
+      <DependentUpon>fSaleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fStart.resx">
+      <DependentUpon>fStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fUserDetails.resx">
+      <DependentUpon>fUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fBorrow.resx">
+      <DependentUpon>fBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fMakeSell.resx">
+      <DependentUpon>fMakeSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fUsers.resx">
+      <DependentUpon>fUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\studentDetails.resx">
+      <DependentUpon>studentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\bookDetails.resx">
+      <DependentUpon>bookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fStudent.resx">
+      <DependentUpon>fStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fBooks.resx">
+      <DependentUpon>fBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fImageShow.resx">
+      <DependentUpon>fImageShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\fMessage.resx">
+      <DependentUpon>fMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow_book_40px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_filled_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow_book_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_filled_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-classification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categorize_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Desktoon-Address-Book.256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\551bffc2cd06139f570dacb4d4063bc6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Everaldo-Desktoon-Address-Book.2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\henry-be-lc7xcWebECc-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-mark-cruzat-3494806.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-rachel-claire-5490916.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-rachel-claire-54909161.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookshop-concept-illustration_114360-2674.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luxury-old-living-room-library-interior-books_107791-11624.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai-generated-8351940_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai-generated-7735114_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2205_w046_n004_126b_p1_126.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2209_w015_n003_991b_p15_991.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16944.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stack-of-books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fine1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
